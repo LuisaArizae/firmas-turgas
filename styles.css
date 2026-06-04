@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f6fb;
+  color: #1f2937;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  padding: 32px;
+  align-items: start;
+}
+
+.panel {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.panel h1 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #244a80;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #1f75bc;
+  box-shadow: 0 0 0 3px rgba(31, 117, 188, 0.15);
+}
+
+.preview-wrap {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.download-btn {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 10;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-weight: 700;
+  color: white;
+  background: #1f75bc;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(31, 117, 188, 0.25);
+}
+
+.download-btn:hover {
+  background: #155a91;
+}
+/* FIRMA */
+.firma {
+  width: 900px;
+   min-height: 330px;
+  height: auto;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 28px 48px;
+  border-radius: 4px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08);
+}
+
+/* LADO IZQUIERDO */
+.lado-logo {
+  flex: 0 0 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGO */
+.logo-cuadro {
+  width: 190px;
+  height: 190px;
+  margin-bottom: 22px;
+}
+
+.logo-cuadro img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* SLOGAN */
+.slogan {
+  width: 270px;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 900;
+  line-height: 1.22;
+  color: #24364f;
+}
+
+.slogan span {
+  color: #009fe3;
+}
+
+.linea-azul {
+  width: 78px;
+  height: 4px;
+  background: #009fe3;
+  border-radius: 50px;
+  margin: 14px auto 0;
+}
+
+/* SEPARADOR */
+.separador {
+  width: 1px;
+  height: 245px;
+  background: #e2e8f0;
+  margin: 0 28px;
+  box-shadow: 6px 0 14px rgba(7, 59, 145, 0.12);
+}
+
+/* DATOS */
+.datos {
+  flex: 1;
+  display: flex;
+   min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TEXTO */
+.nombre {
+  color: #073b91;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.1;
+
+  margin-bottom: 6px;
+
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  max-width: 100%;
+}
+
+.cargo {
+  font-size: 20px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.bloque-contacto {
+  font-size: 18px;
+  line-height: 1.35;
+  color: #222;
+  margin-bottom: 28px;
+}
+
+.direccion {
+  font-size: 18px;
+  line-height: 1.35;
+  color: #222;
+}

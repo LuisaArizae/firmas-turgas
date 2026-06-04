@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantilla Firma TURGAS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="panel">
+      <h1>Generador de firma TURGAS</h1>
+
+      <label>Nombre completo</label>
+      <input id="nombre" type="text" value="María Fernanda Rodríguez Santamaría González" />
+
+      <label>Cargo</label>
+      <input id="cargo" type="text" value="Coordinadora Nacional de Infraestructura Tecnológica y Transformación Digital" />
+
+      <label>Email</label>
+      <input id="email" type="email" value="maria.rodriguez-e@turgas.com" />
+
+      <label>Teléfono</label>
+      <input id="telefono" type="text" value="Tel (+57) 318 6003012" />
+
+      <label>Dirección / sede</label>
+      <select id="sede">
+        <option value="bogota" selected>Bogotá</option>
+        <option value="mariquita">Planta Mariquita</option>
+        <option value="caldas">Planta Caldas Viejo</option>
+        <option value="toqui">Toqui</option>
+      </select>
+    </section>
+
+    <section class="preview-wrap">
+      <button id="descargar" class="download-btn">Descargar PNG</button>
+          <div id="firma" class="firma">
+         <div class="lado-logo">
+                      <div class="logo-cuadro">
+                        <img src="logo_lateral.png" alt="Logo TURGAS" />
+                      </div>
+
+                      <div class="slogan">
+                        SOLUCIONES <span>ENERGÉTICAS</span><br>
+                        PARA UN FUTURO MÁS<br>
+                        EFICIENTE Y SOSTENIBLE
+                      </div>
+
+                      <div class="linea-azul"></div>
+                    </div>
+
+            <div class="separador"></div>
+
+            <div class="datos">
+              <div id="firmaNombre" class="nombre">Luisa Fernanda Ariza Espinel</div>
+              <div id="firmaCargo" class="cargo">Auxiliar de Sistemas</div>
+
+              <div class="bloque-contacto">
+                <div id="firmaEmail" class="email">luisa.ariza@turgas.com</div>
+                <div id="firmaTel" class="telefono">Tel (+57) 318 6003012</div>
+              </div>
+
+              <div id="firmaDireccion" class="direccion">
+                TURGAS S.A E.S.P<br>
+                Av. Cra. 7 No. 113-43 Of. 1501<br>
+                Bogotá D.C.
+              </div>
+            </div>
+          </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
