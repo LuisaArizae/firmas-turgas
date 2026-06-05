@@ -12,7 +12,7 @@ body {
 
 .page {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 320px minmax(0, 1fr);
   gap: 28px;
   padding: 32px;
   align-items: start;
@@ -57,15 +57,21 @@ select:focus {
 
 .preview-wrap {
   position: relative;
-  display: inline-block;
-  width: fit-content;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
 }
 
+/* .firma,
+.guia-firma {
+  width: 1200px;
+  max-width: 100%;
+} */
 .download-btn {
   position: absolute;
-  top: -18px;
-  right: -18px;
-  z-index: 10;
+  top: 18px;
+  right: 18px;
+  z-index: 20;
   border: none;
   border-radius: 999px;
   padding: 11px 18px;
@@ -81,8 +87,9 @@ select:focus {
 }
 /* FIRMA */
 .firma {
-  width: 900px;
-   min-height: 330px;
+  width: 1100px;
+  max-width: 100%;
+  min-height: 330px;
   height: auto;
   background: #ffffff;
   display: flex;
@@ -90,11 +97,32 @@ select:focus {
   padding: 28px 48px;
   border-radius: 4px;
   box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08);
+  position: relative;
+   justify-content: center;
+}
+
+/* .firma,
+.guia-firma {
+  width: 100%;
+  max-width: 100%;
+} */
+
+
+.firma-box {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.firma-box .download-btn {
+  position: absolute;
+  top: -18px;
+  right: 20px;
 }
 
 /* LADO IZQUIERDO */
 .lado-logo {
-  flex: 0 0 285px;
+  flex: 0 0 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,6 +141,7 @@ select:focus {
   height: 100%;
   object-fit: contain;
   display: block;
+  border-radius:10px;
 }
 
 /* SLOGAN */
@@ -148,9 +177,9 @@ select:focus {
 
 /* DATOS */
 .datos {
-  flex: 1;
+  flex: 0 1 600px;
+  min-width: 0;
   display: flex;
-   min-width: 0;
   flex-direction: column;
   justify-content: center;
 }
@@ -158,16 +187,13 @@ select:focus {
 /* TEXTO */
 .nombre {
   color: #073b91;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 900;
   line-height: 1.1;
-
   margin-bottom: 6px;
-
   white-space: normal;
   word-break: break-word;
   overflow-wrap: break-word;
-
   max-width: 100%;
 }
 
@@ -189,4 +215,296 @@ select:focus {
   font-size: 18px;
   line-height: 1.35;
   color: #222;
+}
+
+/*INSTRUCCIONES*/
+
+.guia-firma {
+  width: 1100px;
+  max-width: 100%;
+  margin-top: 35px;
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08);
+}
+
+
+.guia-contenido {
+  flex: 1;
+  padding: 35px 40px;
+  background: #ffffff;
+  display: block;
+}
+.guia-contenido h2 {
+  margin: 0 0 28px;
+  color: #073b91;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.guia-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.columna-pasos {
+  display: block;
+}
+
+.pasos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 40px;
+}
+.paso {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.paso span {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #1f75bc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.paso p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+
+.nota {
+  margin-top: 22px;
+  padding: 14px 16px;
+  background: #f2f6fb;
+  border-radius: 10px;
+  color: #244a80;
+  font-weight: 700;
+}
+
+.telefono {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icono-telefono {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.columna-aviso {
+  width: 100%;
+}
+
+.aviso-privacidad {
+  background: #f7f9fc;
+  border: 1px solid #dbe6f3;
+  border-radius: 14px;
+  padding: 20px;
+  width: 100%;
+}
+
+
+.aviso-privacidad h3 {
+  margin: 0 0 15px;
+  color: #073b91;
+  font-size: 18px;
+}
+
+.texto-aviso {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #374151;
+}
+.nota,
+.nota-importante {
+  font-size: 13px;
+}
+
+.aviso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.aviso-header h3 {
+  margin: 0;
+  color: #073b91;
+  font-size: 22px;
+}
+
+.btn-copiar {
+  border: none;
+  background: #1f75bc;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(31, 117, 188, 0.25);
+}
+
+.btn-copiar:hover {
+  background: #155a91;
+}
+
+.btn-copiar.copiado {
+  background: #16a34a;
+}
+
+
+/* PANTALLAS MUY GRANDES */
+@media (min-width: 1700px) {
+  .firma,
+  .guia-firma {
+    width: 1400px;
+  }
+}
+
+/* RESPONSIVE - PORTÁTIL */
+@media (max-width: 1400px) {
+  .page {
+    grid-template-columns: 300px minmax(0, 1fr);
+    padding: 24px;
+  }
+
+  .firma {
+    padding: 24px 32px;
+  }
+
+  .lado-logo {
+    flex: 0 0 250px;
+  }
+
+  .logo-cuadro {
+    width: 170px;
+    height: 170px;
+  }
+
+  .separador {
+    margin: 0 24px;
+  }
+
+  .nombre {
+    font-size: 22px;
+  }
+
+  .cargo {
+    font-size: 17px;
+  }
+
+  .bloque-contacto,
+  .direccion {
+    font-size: 16px;
+  }
+
+  .guia-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pasos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* PORTÁTIL PEQUEÑO */
+@media (max-width: 1200px) {
+  .page {
+    grid-template-columns: 280px 1fr;
+    padding: 20px;
+  }
+
+  .guia-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pasos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .columna-aviso {
+    margin-top: 10px;
+  }
+}
+
+/* TABLET / PANTALLA ANGOSTA */
+@media (max-width: 950px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    width: 100%;
+  }
+
+ .preview-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+  .download-btn {
+    position: sticky;
+    top: 10px;
+    left: 0;
+    margin-bottom: 14px;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+  .page {
+    padding: 14px;
+  }
+
+  .firma {
+    width: 760px;
+    padding: 24px 32px;
+  }
+
+  .guia-firma {
+    width: 100%;
+  }
+
+  .guia-contenido {
+    padding: 24px 20px;
+  }
+
+  .guia-contenido h2 {
+    font-size: 22px;
+  }
+
+  .pasos {
+    grid-template-columns: 1fr;
+  }
+
+  .aviso-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-copiar {
+    width: 100%;
+  }
 }
