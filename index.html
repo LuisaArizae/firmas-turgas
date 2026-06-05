@@ -6,8 +6,10 @@
   <title>Plantilla Firma TURGAS</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <main class="page">
+
     <section class="panel">
       <h1>Generador de firma TURGAS</h1>
 
@@ -33,40 +35,143 @@
     </section>
 
     <section class="preview-wrap">
+      <div class="firma-box">
       <button id="descargar" class="download-btn">Descargar PNG</button>
-          <div id="firma" class="firma">
-         <div class="lado-logo">
-                      <div class="logo-cuadro">
-                        <img src="logo_lateral.png" alt="Logo TURGAS" />
-                      </div>
 
-                      <div class="slogan">
-                        SOLUCIONES <span>ENERGÉTICAS</span><br>
-                        PARA UN FUTURO MÁS<br>
-                        EFICIENTE Y SOSTENIBLE
-                      </div>
+      <div id="firma" class="firma">
+        <div class="lado-logo">
+          <div class="logo-cuadro">
+            <img src="logo_lateral.png" alt="Logo TURGAS" />
+          </div>
 
-                      <div class="linea-azul"></div>
-                    </div>
+          <div class="slogan">
+            SOLUCIONES <span>ENERGÉTICAS</span><br>
+            PARA UN FUTURO MÁS<br>
+            EFICIENTE Y SOSTENIBLE
+          </div>
 
-            <div class="separador"></div>
+          <div class="linea-azul"></div>
+        </div>
 
-            <div class="datos">
-              <div id="firmaNombre" class="nombre">Luisa Fernanda Ariza Espinel</div>
-              <div id="firmaCargo" class="cargo">Auxiliar de Sistemas</div>
+        <div class="separador"></div>
 
-              <div class="bloque-contacto">
-                <div id="firmaEmail" class="email">luisa.ariza@turgas.com</div>
-                <div id="firmaTel" class="telefono">Tel (+57) 318 6003012</div>
-              </div>
+        <div class="datos">
+          <div id="firmaNombre" class="nombre">Luisa Fernanda Ariza Espinel</div>
+          <div id="firmaCargo" class="cargo">Auxiliar de Sistemas</div>
 
-              <div id="firmaDireccion" class="direccion">
-                TURGAS S.A E.S.P<br>
-                Av. Cra. 7 No. 113-43 Of. 1501<br>
-                Bogotá D.C.
-              </div>
+          <div class="bloque-contacto">
+            <div id="firmaEmail" class="email">luisa.ariza@turgas.com</div>
+
+            <div id="telefonoContainer" class="telefono">
+              <img src="telefono.png" alt="Teléfono" class="icono-telefono">
+              <span id="firmaTel">Tel (+57) 318 6003012</span>
             </div>
           </div>
+
+          <div id="firmaDireccion" class="direccion">
+            TURGAS S.A E.S.P<br>
+            Av. Cra. 7 No. 113-43 Of. 1501<br>
+            Bogotá D.C.
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <section class="guia-firma">
+        <div class="guia-contenido">
+          <h2>Instrucciones para crear o actualizar la firma</h2>
+
+          <div class="guia-layout">
+
+            <div class="columna-pasos">
+              <div class="pasos">
+
+                <div class="paso">
+                  <span>1</span>
+                  <p>Ingrese su <strong>nombre completo</strong>, <strong>cargo</strong>, <strong>correo electrónico</strong>, <strong>teléfono</strong> y seleccione la <strong>sede</strong> correspondiente.</p>
+                </div>
+
+                <div class="paso">
+                  <span>2</span>
+                  <p>Verifique que la vista previa de la firma sea correcta y haga clic en <strong>Descargar PNG</strong>.</p>
+                </div>
+
+                <div class="paso">
+                  <span>3</span>
+                  <p>Abra <strong>Outlook</strong> desde el navegador o desde la aplicación de escritorio.</p>
+                </div>
+
+                <div class="paso">
+                  <span>4</span>
+                  <p>Ingrese a <strong>Configuración</strong> → <strong>Cuenta</strong> → <strong>Firmas</strong> y seleccione <strong>+ Nueva firma</strong>.</p>
+                </div>
+
+                <div class="paso">
+                  <span>5</span>
+                  <p>Asigne un nombre a la firma, por ejemplo <strong>Nueva Firma 2026</strong>. Luego cargue la imagen descargada o copie y pegue la firma en el editor.</p>
+                </div>
+
+                <div class="paso">
+                  <span>6</span>
+                  <p>Marque los dos checkboxes: <strong>Establecer el valor predeterminado para los mensajes nuevos</strong> y <strong>Establecer el valor predeterminado para las respuestas y reenvíos</strong>.</p>
+                </div>
+
+                <div class="paso">
+                  <span>7</span>
+                  <p>Debajo de la imagen de la firma, copie y pegue el <strong>Aviso de Privacidad</strong> ubicado en el recuadro derecho.</p>
+                </div>
+
+                <div class="paso">
+                  <span>8</span>
+                  <p>Guarde los cambios y realice una prueba creando un nuevo correo para confirmar que la firma aparezca correctamente.</p>
+                </div>
+
+              </div>
+
+              
+            </div>
+
+            <div class="columna-aviso">
+              <div class="aviso-privacidad">
+                <h3>Texto para copiar debajo de la firma</h3>
+        <div class="aviso-header">
+          <button id="copiarAviso" class="btn-copiar" type="button">
+            📋 Copiar aviso
+          </button>
+        </div>
+
+        <div id="textoAviso" class="texto-aviso">
+                  <strong>Aviso de Privacidad</strong><br><br>
+
+                  En cumplimiento de la Ley 1581 de 2012 y demás normas concordantes,
+                  TURGAS S.A. E.S.P., identificada con NIT 900.028.111-6, informa que los datos
+                  personales suministrados serán tratados conforme a su Política de Tratamiento
+                  de Datos Personales, disponible en:<br><br>
+
+                  https://turgas.com/proteccion-de-datos.html<br><br>
+
+                  Los titulares podrán ejercer sus derechos de conocer, actualizar,
+                  rectificar, suprimir información y revocar la autorización, mediante solicitud
+                  enviada al correo electrónico <strong>turgas@turgas.com</strong> o a través de los canales
+                  dispuestos por la Compañía.
+                </div>
+              </div>
+
+              <p class="nota-importante">
+                <strong>Importante:</strong> La firma corporativa no estará completa hasta que se agregue el Aviso de Privacidad debajo de la imagen de la firma en Outlook.
+              </p>
+
+              <p class="nota">
+                Nota: Es importante seleccionar ambas opciones para que la firma se agregue automáticamente en correos nuevos, respuestas y reenvíos.
+              </p>
+
+              
+            </div>
+              
+          </div>
+        </div>
+      </section>
+
     </section>
   </main>
 
