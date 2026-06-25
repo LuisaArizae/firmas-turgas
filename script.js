@@ -1,8 +1,9 @@
 const sedes = {
   bogota: `TURGAS S.A E.S.P<br>Av. Cra. 7 No. 113-43 Of. 1501<br>Bogotá D.C.`,
-  mariquita: `TURGAS S.A E.S.P<br>Planta Mariquita<br>Mariquita, Tolima`,
-  caldas: `TURGAS S.A E.S.P<br>Planta Caldas Viejo<br>Caldas Viejo, Tolima`,
-  toqui: `TURGAS S.A E.S.P<br>Planta Toqui<br>Toqui`
+  mariquita: `TURGAS S.A E.S.P<br>Planta de Licuefacción Mariquita<br>Mariquita, Tolima`,
+  caldas: `TURGAS S.A E.S.P<br>EDC Caldas Viejo<br>Caldas Viejo, Alvarado, Tolima`,
+  toqui: `TURGAS S.A E.S.P<br>Planta Toqui<br>Piedras, Tolima`,
+  palagua: `TURGAS S.A E.S.P<br>Planta Palagua<br>Palagua, Puerto Boyacá, Boyacá`
 };
 
 const nombre = document.getElementById("nombre");
